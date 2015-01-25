@@ -1,0 +1,5 @@
+/// image mixin
+@mixin easy-image($img) {
+	background-image: image-url($img);
+	// height: image-height($img);
+}

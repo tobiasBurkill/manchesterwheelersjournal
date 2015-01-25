@@ -1,0 +1,123 @@
+//
+// Compass imports
+//
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/layout";
+@import "compass/utilities";
+  
+
+//
+// Susy grid
+//
+
+@import "susy";
+
+$total-columns  : 24;
+$column-width   : 4.166666667%; // 60px
+$gutter-width   : 0%; // 0px
+$grid-padding   : $gutter-width;
+$container-width: 1440px;
+
+
+//
+// Misc
+//
+.clearfix {
+  clear: both;
+  @include clearfix();
+  @include pie-clearfix();
+}
+
+
+//
+// Typography
+//
+
+
+
+// Import web fonts
+
+html, button, input, select, textarea {
+  font-family: Arial, serif;
+  -webkit-text-stroke: 1px transparent;
+  -webkit-font-smoothing: antialiased
+}
+a, a:active, a:focus { outline: 0; }
+
+//
+// Establish the baseline grid/vertical rhythm
+//
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+
+//
+// Default link styles
+//
+a {
+  color: $black;
+  text-decoration: none;
+  &:hover {
+    color: $black;
+  }
+  &:visited {
+    color: $black;
+  }
+}
+
+
+//
+// SVG Images
+//
+.svgImg { display: none; }
+.svg .svgImg { display: inline-block; }
+
+//
+// Custom functions/mixins
+//
+
+//
+// Converts px to em
+// https://gist.github.com/ijy/1441967
+//
+@function em($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+//
+// Apply bleed to any container where needed
+// http://stackoverflow.com/questions/11223927/susy-how-to-extend-content-box-to-cover-grid-padding-as-well
+//
+@mixin bleed($padding: $grid-padding, $sides: left right) {
+  @if $sides == 'all' {
+    margin: - $padding;
+    padding: $padding;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $padding;
+      padding-#{$side}: $padding;
+    }
+  }
+}
+
+//
+// Placeholder Mixin
+// https://github.com/michaelsacca/Compass-Placeholder-Text-Mixin
+//
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}

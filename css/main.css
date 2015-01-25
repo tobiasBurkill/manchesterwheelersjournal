@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+  *zoom: 1; }
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+html, button, input, select, textarea {
+  font-family: Arial, serif;
+  -webkit-text-stroke: 1px transparent;
+  -webkit-font-smoothing: antialiased; }
+
+a, a:active, a:focus {
+  outline: 0; }
+
+html {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+a {
+  color: #343433;
+  text-decoration: none; }
+  a:hover {
+    color: #343433; }
+  a:visited {
+    color: #343433; }
+
+.svgImg {
+  display: none; }
+
+.svg .svgImg {
+  display: inline-block; }
+
+@font-face {
+  font-family: "icons";
+  src: url('../fonts/icons.eot?1422211078');
+  src: url('../fonts/icons.eot?&1422211078#iefix') format('embedded-opentype'), url('../fonts/icons.woff?1422211078') format('woff'), url('../fonts/icons.ttf?1422211078') format('truetype'), url('../fonts/icons.svg?1422211078') format('svg'); }
+@font-face {
+  font-family: "brandon_grotesquelight";
+  src: url('../fonts/brandon_light-webfont.eot?1422179100');
+  src: url('../fonts/brandon_light-webfont.eot?&1422179100#iefix') format('embedded-opentype'), url('../fonts/brandon_light-webfont.woff?1422179100') format('woff'), url('../fonts/brandon_light-webfont.ttf?1422179100') format('truetype'), url('../fonts/brandon_light-webfont.svg?1422179100') format('svg'); }
+@font-face {
+  font-family: "brandon_bld-webfont";
+  src: url('../fonts/brandon_bld-webfont.eot?1422179100');
+  src: url('../fonts/brandon_bld-webfont.eot?&1422179100#iefix') format('embedded-opentype'), url('../fonts/brandon_bld-webfont.woff?1422179100') format('woff'), url('../fonts/brandon_bld-webfont.ttf?1422179100') format('truetype'), url('../fonts/brandon_bld-webfont.svg?1422179100') format('svg'); }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?12466035#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-logo:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-right-arrow:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-menu:before {
+  content: '\e803'; }
+
+/* '' */
+h1 {
+  font-family: 'brandon_bld-webfont', 'helvetica', 'arial', sans-serif;
+  font-size: 1.75em;
+  line-height: 1em;
+  color: #4169E1; }
+
+.article--author {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.1875em;
+  color: #0c1b4a;
+  margin-bottom: 5px; }
+
+.article--sub-info {
+  font-family: 'brandon_grotesquelight', 'helvetica', 'arial', sans-serif;
+  font-size: 1em;
+  color: #0c1b4a;
+  margin-top: 5px; }
+
+.header--page {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  padding: 30px;
+  z-index: 100;
+  box-sizing: border-box; }
+
+.logo {
+  float: left;
+  width: 50px;
+  height: 50px;
+  padding: 2px 3px 0 0;
+  border-radius: 28px;
+  text-align: center;
+  background-color: #FFFFFF; }
+  .logo a {
+    line-height: 50px; }
+    .logo a .icon-logo {
+      font-size: 32px;
+      color: #343433; }
+
+.menu {
+  float: right; }
+
+.btn--menu {
+  color: #343433; }
+  .btn--menu .icon-menu {
+    font-size: 24px;
+    line-height: 38px; }
+
+.btn--menu--hover {
+  position: relative;
+  width: 94px;
+  height: 38px;
+  margin-right: 10px;
+  float: left;
+  color: #FFFFFF;
+  background-color: #343433;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 7px;
+  display: none; }
+
+.btn--menu--hover:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(52, 52, 51, 0);
+  border-left-color: #343433;
+  border-width: 6px;
+  margin-top: -6px; }
+
+.hidden {
+  visibility: hidden; }
+
+body {
+  color: #343433; }
+
+.main {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .main:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.article--container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  width: 100%;
+  float: right;
+  margin-right: 0; }
+  .article--container .next-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px; }
+
+.article--image {
+  height: 100vh;
+  overflow: hidden;
+  width: 49.57983%;
+  float: left;
+  margin-right: 0.84034%; }
+
+.article--header {
+  height: 87px;
+  margin-bottom: 40px; }
+
+.article--header--details {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 79.59184%;
+  float: left;
+  margin-right: 2.04082%; }
+
+.article--header--photo {
+  width: 18.36735%;
+  float: right;
+  margin-right: 0; }
+
+.article--copy {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 41.17647%;
+  float: left;
+  margin-right: 0.84034%;
+  margin-left: 4.20168%; }
+
+.article--preview p {
+  margin-bottom: 80px; }
+
+a {
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.btn--large {
+  padding: 10px 20px;
+  border-radius: 40px;
+  color: #4169E1;
+  border: 1px solid #4169E1; }
+  .btn--large:hover {
+    color: #FFFFFF;
+    background-color: #4169E1; }
+
+.btn--small {
+  color: #BBBBBB; }

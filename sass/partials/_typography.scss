@@ -1,0 +1,23 @@
+// Typography
+h1 {
+	font-family: 'brandon_bld-webfont', 'helvetica', 'arial', sans-serif;
+	font-size: em(28px);
+	line-height: 1em;
+	color: $royalBlue;
+}
+
+.article--author {
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: em(19px);
+	color: darken($royalBlue, 40%);
+	margin-bottom: 5px;
+}
+
+.article--sub-info {
+	font-family: 'brandon_grotesquelight', 'helvetica', 'arial', sans-serif;
+	font-size: em(16px);
+	color: darken($royalBlue, 40%);
+	margin-top: 5px;
+}
